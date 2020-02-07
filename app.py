@@ -9,3 +9,7 @@ app = Flask(__name__)
 def index():
     label = subprocess.check_output(["git", "describe", "--always"]).strip().decode()
     return f"The current git commit hash: {label}"
+
+
+if __name__ == '__main__':
+    app.run()
